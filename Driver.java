@@ -17,7 +17,7 @@ public class Driver extends WindowController {
 
     public void onMouseClick(Location point){
         canvas.setBackground(Color.white);
-        canvas.clear();
+        canvas.clear(); //reset
         if(true){
             BreakoutGame startGame = new BreakoutGame(this, point, canvas);
         }
