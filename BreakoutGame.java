@@ -143,20 +143,23 @@ public class BreakoutGame extends ActiveObject{
             if (ball.overlaps(paddle)){
                 speedY *= -1.03;
 
-                if(ball.getX()<paddle.getWidth()/10){
-                    speedX *= -1.03;
+                for(int i = 0; i<rng.nextInt(8)+9; i++){
+                    int dx;
+                    if(i*rng.nextInt()%3 == 0){
+                        dx = -1;
+                    }
+                    else{
+                        dx = 1;
+                    }
+                    speedX *= dx*1.009;
                 }
-                if(ball.getX()< .9*paddle.getWidth()){
-                    speedX *= -1.03;
-                }
+
                 if(ball.getX() >= paddle.getWidth() || ball.getWidth() <= paddle.getX()){
                     //touches the outermost paddle side, slide the ball out!
                     speedY *= 1.03;
                     speedX *= 1.03;
                 }
-                else{
-                    speedX *= 1.03;
-                }
+
                 ball.move(speedX, speedY);
             }
 
