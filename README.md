@@ -1,5 +1,5 @@
 # Breakout
-This is an unfinished piece of a very well-known breakout game, written in java. Using the objectdraw library support for the object implementation, such that drawing the bricks, player paddle, ball on to the canvas.
+This is a very well-known breakout game, written in java. Using the objectdraw library support for the object implementation, such that drawing the bricks, player paddle, ball on to the canvas.
 
 How to play:
 1. Click anywhere on the canvas to get started.
